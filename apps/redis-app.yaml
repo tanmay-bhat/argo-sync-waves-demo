@@ -16,7 +16,8 @@ spec:
     helm:
       values: 
         architecture: standalone
-        auth.enabled: 'false'
+        auth:
+          enabled: 'false'
   syncPolicy:
     automated:
       selfHeal: true
