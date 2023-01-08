@@ -14,11 +14,9 @@ spec:
     targetRevision: 17.4.1
     chart: redis
     helm:
-      parameters:
-        - name: architecture
-          value: standalone
-        - name: auth.enabled
-          value: 'false'
+      values: 
+        architecture: standalone
+        auth.enabled: 'false'
   syncPolicy:
     automated:
       selfHeal: true
