@@ -14,10 +14,10 @@ spec:
     targetRevision: 17.4.1
     chart: redis
     helm:
-      values: 
+      values: |
         architecture: standalone
         auth:
-          enabled: 'false'
+          enabled: false
   syncPolicy:
     automated:
       selfHeal: true
