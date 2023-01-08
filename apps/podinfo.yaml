@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: podinfo
+  name: frontend
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "1"
@@ -14,9 +14,6 @@ spec:
     repoURL: 'https://stefanprodan.github.io/podinfo'
     targetRevision: 6.3.0
     chart: podinfo
-    helm:
-      values: |
-        cache: "tcp://redis-master:6379"
   syncPolicy:
     automated:
       selfHeal: false
